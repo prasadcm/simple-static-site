@@ -20,7 +20,7 @@
     "lint:markdown": "markdownlint --config ./.markdownlint.json '**/*.{md,mdx}'",
     "lint:html": "htmlhint --config ./.htmlhintrc '**/*.html'",
     "lint:css": "stylelint 'css/**/*.css'",
-    "prettier": "prettier --write '**/*.{js,json,html,css,scss,md,mdx}'"
+    "format": "prettier --write '**/*.{js,json,html,css,scss,md,mdx}'"
   },
   "lint-staged": {
     "*.{html}": [
