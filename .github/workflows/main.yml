@@ -1,0 +1,39 @@
+name: CI Pipeline for main branch
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint-and-format:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project: [static-site]
+
+    defaults:
+      run:
+        working-directory: ${{ matrix.project }} # Automatically runs commands inside each subfolder
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Prettier
+        run: npm run format
+
+      - name: Run Linter
+        run: npm run lint
