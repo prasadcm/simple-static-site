@@ -12,14 +12,6 @@ jobs:
   lint-and-format:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        project: [static-site]
-
-    defaults:
-      run:
-        working-directory: ${{ matrix.project }} # Automatically runs commands inside each subfolder
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
