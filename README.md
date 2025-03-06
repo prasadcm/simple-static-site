@@ -16,7 +16,9 @@ Open <http://localhost:3001> on any browser.
 
 - Git ignore by .gitignore
 - No package-lock.json. Always use latest. Refer .npmrc
-- Linting for .md, html
+- Linting for .md, html, css
+- format the code using prettier
+- Github actions
 
 ## Packages used
 
