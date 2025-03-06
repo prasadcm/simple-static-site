@@ -19,9 +19,14 @@ Open <http://localhost:3001> on any browser.
 - Linting for .md, html, css
 - format the code using prettier
 - Github actions
+- VS code settings
 
 ## Packages used
 
-- markdownlint - linting readme files
+- markdownlint, markdownlint-cli - linting readme files
 - npm-run-all - To run `run-s` command in package script which runs sequentially
 - htmlhint - linting html files
+- lint-staged - Along with husky to lint and format the code before commit
+- husky - Pre commit hook for code formatting
+- prettier - Format the code
+- stylelint, stylelint-config-standard - Linting css fines
